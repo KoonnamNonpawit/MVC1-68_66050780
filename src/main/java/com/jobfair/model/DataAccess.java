@@ -38,7 +38,7 @@ public class DataAccess {
                 jobs.add(job);
             }
         } catch (SQLException e) {
-            e.printStackTrace(); // ในการใช้งานจริงควรจัดการ Exception ให้ดีกว่านี้
+            e.printStackTrace();
         }
         return jobs;
     }
@@ -130,9 +130,6 @@ public class DataAccess {
         if ("งานปกติ".equals(job.getJobType()) && !"จบแล้ว".equals(candidate.getStatus())) {
             return "ตำแหน่งงานปกติรับสมัครเฉพาะผู้ที่ 'จบแล้ว' เท่านั้น";
         }
-
-        // หากทุกอย่างถูกต้อง สามารถเพิ่มโค้ดบันทึกการสมัครลง DB ได้ที่นี่ (ถ้ามีตาราง Application)
-        // แต่ตามโจทย์ข้อ 2 ไม่ได้บังคับ จึงคืนค่าว่าสำเร็จได้เลย
 
         return "SUCCESS";
     }

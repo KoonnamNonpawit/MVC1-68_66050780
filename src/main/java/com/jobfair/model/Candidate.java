@@ -16,7 +16,7 @@ public class Candidate {
     }
 
     public Candidate() {
-        //TODO Auto-generated constructor stub
+    
     }
 
     public String getCandidateId() {

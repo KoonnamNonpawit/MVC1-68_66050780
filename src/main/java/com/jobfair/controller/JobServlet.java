@@ -107,7 +107,7 @@ public class JobServlet extends HttpServlet {
         String jobId = request.getParameter("jobId");
         String errorMessage = "";
 
-        // 1. ตรวจสอบความถูกต้องของอีเมล (ถึงแม้จะดึงจาก session แต่ก็ควรเช็ค)
+        // 1. ตรวจสอบความถูกต้องของอีเมล
         if (!isValidEmail(email)) {
             errorMessage = "รูปแบบอีเมลไม่ถูกต้อง";
         } else {
@@ -137,7 +137,7 @@ public class JobServlet extends HttpServlet {
         return pat.matcher(email).matches();
     }
     
-    // ----- Method ใหม่สำหรับ Authentication -----
+    // ----- Authentication -----
 
     private void showLoginForm(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

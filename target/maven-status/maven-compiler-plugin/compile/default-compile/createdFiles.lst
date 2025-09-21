@@ -1,0 +1,6 @@
+com\jobfair\model\Candidate.class
+com\jobfair\model\Job.class
+com\jobfair\util\DBUtil.class
+com\jobfair\controller\JobServlet.class
+com\jobfair\model\Company.class
+com\jobfair\model\DataAccess.class
